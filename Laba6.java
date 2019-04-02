@@ -42,8 +42,8 @@ public class Laba6 {
             int c = nums[shuffle[i][2]];
             int d = nums[shuffle[i][3]];
 
-            if (a * b - c  == RESULT) return true;
-            if (a * b + c  == RESULT) return true;
+            if (a * b - c == RESULT) return true;
+            if (a * b + c == RESULT) return true;
 
             if (a + b + c - d == RESULT) return true;
             if (a + b + c * d == RESULT) return true;
@@ -102,11 +102,13 @@ public class Laba6 {
             }
             if (d != 0 && c != 0) {
                 if (a + b / c / d == RESULT) return true;
+                if ((a + b) / c / d == RESULT) return true;
                 if (a * b / c / d == RESULT) return true;
                 if (a - b / c / d == RESULT) return true;
+                if ((a - b) / c / d == RESULT) return true;
+                if (-(a - b) / c / d == RESULT) return true;
 
 
-               
             }
 
         }
@@ -116,7 +118,7 @@ public class Laba6 {
     }
 
     public static void main(String[] args) {
-        int[] array = {3, 7, 3, 7};
+        int[] array = {4, 1, 2, 3};
 
         System.out.println(canBeEqualTo24(array));
 
