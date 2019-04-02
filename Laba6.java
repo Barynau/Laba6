@@ -101,13 +101,10 @@ public class Laba6 {
                 if (-(a + b - c) / d == RESULT) return true;
             }
             if (d != 0 && c != 0) {
-                if (a + b / c / d == RESULT) return true;
-                if ((a + b) / c / d == RESULT) return true;
+               
                 if (a * b / c / d == RESULT) return true;
-                if (a - b / c / d == RESULT) return true;
-                if ((a - b) / c / d == RESULT) return true;
-                if (-(a - b) / c / d == RESULT) return true;
-
+                          
+              
 
             }
 
