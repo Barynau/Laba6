@@ -42,8 +42,7 @@ public class Laba6 {
             int c = nums[shuffle[i][2]];
             int d = nums[shuffle[i][3]];
 
-            if (a * b - c == RESULT) return true;
-            if (a * b + c == RESULT) return true;
+
 
             if (a + b + c - d == RESULT) return true;
             if (a + b + c * d == RESULT) return true;
@@ -74,43 +73,43 @@ public class Laba6 {
             if ((-a - b + c) * d == RESULT) return true;
             if (-(a - b - c) * d == RESULT) return true;
             if (-(a - b + c) * d == RESULT) return true;
+
+
             if (d != 0) {
-                if (a + b + c / d == RESULT) return true;
-                if (a * b * c / d == RESULT) return true;
-                if (a + b - c / d == RESULT) return true;
-                if (a * b + c / d == RESULT) return true;
-                if (a * b - c / d == RESULT) return true;
-                if (a - b - c / d == RESULT) return true;
+                if (a + b + c / d == RESULT || a + b + c % d == 0) return true;
+                if (a * b * c / d == RESULT || a * b * c % d == 0) return true;
+                if (a + b - c / d == RESULT || a + b - c % d == 0) return true;
+                if (a * b + c / d == RESULT || a * b + c % d == 0) return true;
+                if (a * b - c / d == RESULT || a * b - c % d == 0) return true;
+                if (a - b - c / d == RESULT || a - b - c % d == 0) return true;
 
-                if (-a + b + c / d == RESULT) return true;
-                if (-a * b * c / d == RESULT) return true;
-                if (-a + b - c / d == RESULT) return true;
-                if (-a * b + c / d == RESULT) return true;
-                if (-a * b - c / d == RESULT) return true;
-                if (-a - b - c / d == RESULT) return true;
 
-                if ((a + b + c) / d == RESULT) return true;
-                if ((a - b - c) / d == RESULT) return true;
-                if ((a + b - c) / d == RESULT) return true;
-
-                if ((-a + b + c) / d == RESULT) return true;
-                if ((-a - b - c) / d == RESULT) return true;
-                if ((-a + b - c) / d == RESULT) return true;
-
-                if (-(a - b - c) / d == RESULT) return true;
-                if (-(a + b - c) / d == RESULT) return true;
+                if (-a + b + c / d == RESULT || -a + b + c % d == 0) return true;
+                if (-a * b * c / d == RESULT || -a * b * c % d == 0) return true;
+                if (-a + b - c / d == RESULT || -a + b - c % d == 0) return true;
+                if (-a * b + c / d == RESULT || -a * b + c % d == 0) return true;
+                if (-a * b - c / d == RESULT || -a * b - c % d == 0) return true;
+                if (-a - b - c / d == RESULT || -a - b - c % d == 0) return true;
+                if ((a + b + c) / d == RESULT || (a + b + c) % d == 0) return true;
+                if ((a - b - c) / d == RESULT || (a - b - c) % d == 0) return true;
+                if ((a + b - c) / d == RESULT || (a + b - c) % d == 0) return true;
+                if ((-a + b + c) / d == RESULT || (-a + b + c) % d == 0) return true;
+                if ((-a - b - c) / d == RESULT || (-a - b - c) % d == 0) return true;
+                if ((-a + b - c) / d == RESULT || (-a + b - c) % d == 0) return true;
+                if (-(a - b - c) / d == RESULT || -(a - b - c) % d == 0) return true;
+                if (-(a + b - c) / d == RESULT || -(a + b - c) % d == 0) return true;
             }
-            if (d != 0 && c != 0) {
-               
-                if (a * b / c / d == RESULT) return true;
-                          
-              
+            if (d * c != 0) {
+                if ((a * b) / (d * c) == RESULT || (a * b) % (d * c) == 0) return true;
 
             }
-
+            if ((a * c - b) != 0) {
+                if ((d * c) / (a * c - b) == RESULT || (d * c) % (a * c - b) == 0) return true;
+            }
+            if ((a * c + b) != 0) {
+                if ((d * c) / (a * c + b) == RESULT || (d * c) % (a * c - b) == 0) return true;
+            }
         }
-
-
         return false;
     }
 
@@ -118,6 +117,8 @@ public class Laba6 {
         int[] array = {4, 1, 2, 3};
 
         System.out.println(canBeEqualTo24(array));
+       
+
 
     }
 }
