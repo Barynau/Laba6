@@ -1,5 +1,3 @@
-import com.sun.org.apache.regexp.internal.RE;
-
 public class Laba6 {
     public static boolean canBeEqualTo24(int[] nums) {
         if (nums.length < 4) return false;
@@ -74,6 +72,12 @@ public class Laba6 {
             if ((-a - b + c) * d == RESULT) return true;
             if (-(a - b - c) * d == RESULT) return true;
             if (-(a - b + c) * d == RESULT) return true;
+            if (-(a + b) * (c + d) == RESULT) return true;
+            if (-(a - b) * (c + d) == RESULT) return true;
+            if (-(a - b) * (c - d) == RESULT) return true;
+            if ((a + b) * (c + d) == RESULT) return true;
+            if ((a - b) * (c + d) == RESULT) return true;
+            if ((a - b) * (c - d) == RESULT) return true;
 
 
             if (d != 0) {
@@ -110,14 +114,12 @@ public class Laba6 {
             if ((a * c + b) != 0) {
                 if ((d * c) / (a * c + b) == RESULT && (d * c) % (a * c - b) == 0) return true;
             }
-            if(b!=0)
-            {
-                if(((a+b*c)*d)/b==RESULT &&((a+b*c)*d)%b==0)return true;
+            if (b != 0) {
+                if (((a + b * c) * d) / b == RESULT && ((a + b * c) * d) % b == 0) return true;
 
             }
-            if(b!=0)
-            {
-                if(((a-b*c)*d)/b==RESULT &&((a-b*c)*d)%b==0)return true;
+            if (b != 0) {
+                if (((a - b * c) * d) / b == RESULT && ((a - b * c) * d) % b == 0) return true;
 
             }
         }
@@ -125,7 +127,8 @@ public class Laba6 {
     }
 
     public static void main(String[] args) {
-        int[] array = {3, 7, 3, 7};
+
+        int[] array = {1, 2, 1, 7};
 
         System.out.println(canBeEqualTo24(array));
 
