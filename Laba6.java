@@ -85,8 +85,6 @@ public class Laba6 {
                 if ((a * b) / (c - d) == RESULT && (a * b) % (c - d) == 0) return true;
                 if ((a * b) / (c + d) == RESULT && (a * b) % (c + d) == 0) return true;
             }
-            if (c != 0) {
-            }
             if ((a * c - b) != 0) {
                 if ((d * c) / (a * c - b) == RESULT && (d * c) % (a * c - b) == 0) return true;
             }
@@ -116,7 +114,7 @@ public class Laba6 {
 
         System.out.println(canBeEqualTo24(array) + " will be true");
         System.out.println(canBeEqualTo24(array1) + " will be true");
-        System.out.println(canBeEqualTo24(array2) + " will be falce");
+        System.out.println(canBeEqualTo24(array2) + " will be false");
         System.out.println(canBeEqualTo24(array3) + " will be true");
         System.out.println(canBeEqualTo24(array4) + " will be true");
         System.out.println(canBeEqualTo24(array5) + " will be true");
