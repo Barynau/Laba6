@@ -51,28 +51,19 @@ public class Laba6 {
             if (a - b - c + d == RESULT) return true;
             if (a - b - c * d == RESULT) return true;
             if (a + b - c - d == RESULT) return true;
+            if (a - b - c - d == RESULT) return true;
 
-            if (-a + b + c - d == RESULT) return true;
-            if (-a + b + c * d == RESULT) return true;
-            if (-a + b * c * d == RESULT) return true;
             if (-a * b * c - d == RESULT) return true;
             if (-a + b * c - d == RESULT) return true;
-            if (-a - b - c + d == RESULT) return true;
             if (-a - b - c * d == RESULT) return true;
-            if (-a + b - c - d == RESULT) return true;
 
-            if (a + (b * c * d) == RESULT) return true;
             if (a * (b * c - d) == RESULT) return true;
             if (a * -(b * c - d) == RESULT) return true;
             if ((a + b + c) * d == RESULT) return true;
             if ((a - b - c) * d == RESULT) return true;
             if ((a - b + c) * d == RESULT) return true;
-
-            if ((-a - b - c) * d == RESULT) return true;
             if ((-a - b + c) * d == RESULT) return true;
-            if (-(a - b - c) * d == RESULT) return true;
             if (-(a - b + c) * d == RESULT) return true;
-            if (-(a + b) * (c + d) == RESULT) return true;
             if (-(a - b) * (c + d) == RESULT) return true;
             if (-(a - b) * (c - d) == RESULT) return true;
             if ((a + b) * (c + d) == RESULT) return true;
@@ -83,26 +74,12 @@ public class Laba6 {
             if (d != 0) {
                 if (a + b + c / d == RESULT && a + b + c % d == 0) return true;
                 if (a * b * c / d == RESULT && a * b * c % d == 0) return true;
-
                 if (a + b - c / d == RESULT && a + b - c % d == 0) return true;
                 if (a * b + c / d == RESULT && a * b + c % d == 0) return true;
                 if (a * b - c / d == RESULT && a * b - c % d == 0) return true;
-                if (a - b - c / d == RESULT && a - b - c % d == 0) return true;
-
-                if (-a + b + c / d == RESULT && -a + b + c % d == 0) return true;
-                if (-a * b * c / d == RESULT && -a * b * c % d == 0) return true;
-                if (-a + b - c / d == RESULT && -a + b - c % d == 0) return true;
                 if (-a * b + c / d == RESULT && -a * b + c % d == 0) return true;
-                if (-a * b - c / d == RESULT && -a * b - c % d == 0) return true;
-                if (-a - b - c / d == RESULT && -a - b - c % d == 0) return true;
                 if ((a + b + c) / d == RESULT && (a + b + c) % d == 0) return true;
-                if ((a - b - c) / d == RESULT && (a - b - c) % d == 0) return true;
-                if ((a + b - c) / d == RESULT && (a + b - c) % d == 0) return true;
-                if ((-a + b + c) / d == RESULT && (-a + b + c) % d == 0) return true;
-                if ((-a - b - c) / d == RESULT && (-a - b - c) % d == 0) return true;
-                if ((-a + b - c) / d == RESULT && (-a + b - c) % d == 0) return true;
-                if (-(a - b - c) / d == RESULT && -(a - b - c) % d == 0) return true;
-                if (-(a + b - c) / d == RESULT && -(a + b - c) % d == 0) return true;
+
             }
             if (d * c != 0) {
                 if ((a * b) / (d * c) == RESULT && (a * b) % (d * c) == 0) return true;
@@ -128,9 +105,16 @@ public class Laba6 {
 
     public static void main(String[] args) {
 
-        int[] array = {1, 2, 1, 7};
+        int[] array =  {4, 1, 8, 7};
+
+
+
+
+
+
 
         System.out.println(canBeEqualTo24(array));
+
 
 
     }
