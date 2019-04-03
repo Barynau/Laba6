@@ -33,8 +33,6 @@ public class Laba6 {
                 {3, 1, 2, 0},
                 {3, 2, 0, 1},
                 {3, 2, 1, 0},
-
-
         };
         for (int i = 0; i < 24; i++) {
             int a = nums[shuffle[i][0]];
@@ -70,7 +68,6 @@ public class Laba6 {
             if ((a - b) * (c + d) == RESULT) return true;
             if ((a - b) * (c - d) == RESULT) return true;
 
-
             if (d != 0) {
                 if (a + b + c / d == RESULT && a + b + c % d == 0) return true;
                 if (a * b * c / d == RESULT && a * b * c % d == 0) return true;
@@ -83,7 +80,12 @@ public class Laba6 {
             }
             if (d * c != 0) {
                 if ((a * b) / (d * c) == RESULT && (a * b) % (d * c) == 0) return true;
-
+            }
+            if (c - d != 0) {
+                if ((a * b) / (c - d) == RESULT && (a * b) % (c - d) == 0) return true;
+                if ((a * b) / (c + d) == RESULT && (a * b) % (c + d) == 0) return true;
+            }
+            if (c != 0) {
             }
             if ((a * c - b) != 0) {
                 if ((d * c) / (a * c - b) == RESULT && (d * c) % (a * c - b) == 0) return true;
@@ -93,11 +95,9 @@ public class Laba6 {
             }
             if (b != 0) {
                 if (((a + b * c) * d) / b == RESULT && ((a + b * c) * d) % b == 0) return true;
-
             }
             if (b != 0) {
                 if (((a - b * c) * d) / b == RESULT && ((a - b * c) * d) % b == 0) return true;
-
             }
         }
         return false;
@@ -105,16 +105,23 @@ public class Laba6 {
 
     public static void main(String[] args) {
 
-        int[] array =  {4, 1, 8, 7};
+        int[] array = {4, 1, 8, 7};
+        int[] array1 = {1, 2, 1, 7};
+        int[] array2 = {1, 2, 2, 1};
+        int[] array3 = {8, 1, 2, 3};
+        int[] array4 = {3, 8, 9, 8};
+        int[] array5 = {6, 9, 2, 3};
+        int[] array6 = {2, 6, 4, 3};
+        int[] array7 = {9, 8, 4, 6};
 
-
-
-
-
-
-
-        System.out.println(canBeEqualTo24(array));
-
+        System.out.println(canBeEqualTo24(array) + " will be true");
+        System.out.println(canBeEqualTo24(array1) + " will be true");
+        System.out.println(canBeEqualTo24(array2) + " will be falce");
+        System.out.println(canBeEqualTo24(array3) + " will be true");
+        System.out.println(canBeEqualTo24(array4) + " will be true");
+        System.out.println(canBeEqualTo24(array5) + " will be true");
+        System.out.println(canBeEqualTo24(array6) + " will be true");
+        System.out.println(canBeEqualTo24(array7) + " will be true");
 
 
     }
