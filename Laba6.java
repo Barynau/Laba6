@@ -55,6 +55,8 @@ public class Laba6 {
             if (-a + b * c - d == RESULT) return true;
             if (-a - b - c * d == RESULT) return true;
 
+            if (a * b * (c - d) == RESULT) return true;
+            if (a * b * (c + d) == RESULT) return true;
             if (a * (b * c - d) == RESULT) return true;
             if (a * -(b * c - d) == RESULT) return true;
             if ((a + b + c) * d == RESULT) return true;
@@ -103,23 +105,9 @@ public class Laba6 {
 
     public static void main(String[] args) {
 
-        int[] array = {4, 1, 8, 7};
-        int[] array1 = {1, 2, 1, 7};
-        int[] array2 = {1, 2, 2, 1};
-        int[] array3 = {8, 1, 2, 3};
-        int[] array4 = {3, 8, 9, 8};
-        int[] array5 = {6, 9, 2, 3};
-        int[] array6 = {2, 6, 4, 3};
-        int[] array7 = {9, 8, 4, 6};
+        int[] array = {1, 1, 3, 4};
 
-        System.out.println(canBeEqualTo24(array) + " will be true");
-        System.out.println(canBeEqualTo24(array1) + " will be true");
-        System.out.println(canBeEqualTo24(array2) + " will be false");
-        System.out.println(canBeEqualTo24(array3) + " will be true");
-        System.out.println(canBeEqualTo24(array4) + " will be true");
-        System.out.println(canBeEqualTo24(array5) + " will be true");
-        System.out.println(canBeEqualTo24(array6) + " will be true");
-        System.out.println(canBeEqualTo24(array7) + " will be true");
+        System.out.println(canBeEqualTo24(array));
 
 
     }
