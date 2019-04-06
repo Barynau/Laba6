@@ -42,73 +42,58 @@ public class Laba6 {
 
 
             if (a + b + c - d == RESULT) return true;
+            if (a + b - c - d == RESULT) return true;
+            if (a + b + c * d == RESULT) return true;
             if (a + b + c * d == RESULT) return true;
             if (a + b * c * d == RESULT) return true;
-            if (a * b * c - d == RESULT) return true;
-            if (a + b * c - d == RESULT) return true;
-            if (a - b - c + d == RESULT) return true;
-            if (a - b - c * d == RESULT) return true;
-            if (a + b - c - d == RESULT) return true;
-            if (a - b - c - d == RESULT) return true;
-
-            if (-a * b * c - d == RESULT) return true;
+            if (a - b + c * d == RESULT) return true;
             if (-a + b * c - d == RESULT) return true;
-            if (-a - b - c * d == RESULT) return true;
-
-            if (a * b * (c - d) == RESULT) return true;
+            if (a * b * c - d == RESULT) return true;
+            if (a + b * (c + d) == RESULT) return true;
+            if (a - b * (c + d) == RESULT) return true;
+            if (a + b * (c - d) == RESULT) return true;
             if (a * b * (c + d) == RESULT) return true;
-            if (a * (b * c - d) == RESULT) return true;
-            if (a * -(b * c - d) == RESULT) return true;
-            if ((a + b + c) * d == RESULT) return true;
-            if ((a - b - c) * d == RESULT) return true;
-            if ((a - b + c) * d == RESULT) return true;
-            if ((-a - b + c) * d == RESULT) return true;
-            if (-(a - b + c) * d == RESULT) return true;
-            if (-(a - b) * (c + d) == RESULT) return true;
-            if (-(a - b) * (c - d) == RESULT) return true;
+            if (a * b * (c - d) == RESULT) return true;
+            if (-a + b * (c - d) == RESULT) return true;
+            if (a * (b + c + d) == RESULT) return true;
+            if (a * (b + c - d) == RESULT) return true;
+            if (a * (b - c - d) == RESULT) return true;
+            if (-a + (b * (c + d)) == RESULT) return true;
             if ((a + b) * (c + d) == RESULT) return true;
             if ((a - b) * (c + d) == RESULT) return true;
             if ((a - b) * (c - d) == RESULT) return true;
+            if ((a * b) + (c * d) == RESULT) return true;
+            if ((a * b) - (c * d) == RESULT) return true;
+            if (a * (b * c - d) == RESULT) return true;
+            if (a * (b * c + d) == RESULT) return true;
 
             if (d != 0) {
-                if (a + b + c / d == RESULT && a + b + c % d == 0) return true;
-                if (a * b * c / d == RESULT && a * b * c % d == 0) return true;
-                if (a + b - c / d == RESULT && a + b - c % d == 0) return true;
-                if (a * b + c / d == RESULT && a * b + c % d == 0) return true;
-                if (a * b - c / d == RESULT && a * b - c % d == 0) return true;
-                if (-a * b + c / d == RESULT && -a * b + c % d == 0) return true;
-                if ((a + b + c) / d == RESULT && (a + b + c) % d == 0) return true;
-
+                if (a * b - c / d == RESULT && c % d == 0) return true;
+                if (a + b - c / d == RESULT && c % d == 0) return true;
+                if ((a * b) / d + c == RESULT && (a * b) % d == 0) return true;
+                if (((a + b) * c) / d == RESULT && ((a + b) * c) % d == 0) return true;
+                if (((a - b) * c) / d == RESULT && ((a - b) * c) % d == 0) return true;
+                if (((a * b) - c) / d == RESULT && ((a * b) - c) % d == 0) return true;
+                if (((a * d + c) * b) / d == RESULT && ((a * d + c) * b) % d == 0) return true;
+                if (((a * d - c) * b) / d == RESULT && ((a * d - c) * b) % d == 0) return true;
             }
             if (d * c != 0) {
                 if ((a * b) / (d * c) == RESULT && (a * b) % (d * c) == 0) return true;
             }
             if (c - d != 0) {
                 if ((a * b) / (c - d) == RESULT && (a * b) % (c - d) == 0) return true;
+            }
+            if (c + d != 0) {
                 if ((a * b) / (c + d) == RESULT && (a * b) % (c + d) == 0) return true;
             }
             if ((a * c - b) != 0) {
                 if ((d * c) / (a * c - b) == RESULT && (d * c) % (a * c - b) == 0) return true;
             }
-            if ((a * c + b) != 0) {
-                if ((d * c) / (a * c + b) == RESULT && (d * c) % (a * c - b) == 0) return true;
-            }
-            if (b != 0) {
-                if (((a + b * c) * d) / b == RESULT && ((a + b * c) * d) % b == 0) return true;
-            }
-            if (b != 0) {
-                if (((a - b * c) * d) / b == RESULT && ((a - b * c) * d) % b == 0) return true;
-            }
         }
         return false;
     }
 
-    public static void main(String[] args) {
-
-        int[] array = {1, 1, 3, 4};
-
-        System.out.println(canBeEqualTo24(array));
 
 
-    }
 }
+
